@@ -29,7 +29,7 @@ pipeline {
         stage ('pull the code'){
             steps {
                 script {
-                    docker.withRegistry('https://private-registry-1', "docker-hub") {
+                    docker.withRegistry('https://index.docker.io/v1/', "docker-hub") {
                         def image = docker.image("${DOCKER_IMAGE}")
                         image.pull()
                     }
