@@ -38,7 +38,7 @@ pipeline {
         }
         stage ('deploy') {
             steps {
-                sh 'docker run -itd --name cont1 -p 1010:5000 ("${DOCKER_IMAGE}")'
+                sh 'docker run -itd --name cont1 -p 1010:5000 ${DOCKER_IMAGE}'
             }
         }
        
