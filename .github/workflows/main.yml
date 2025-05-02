@@ -3,7 +3,7 @@ name: Deploy to AWS Lambda using Docker
 on:
   push:
     branches:
-      - main
+      # - main
 
 jobs:
   deploy:
